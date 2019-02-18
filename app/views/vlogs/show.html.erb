@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @vlog.title %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @vlog.desc %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @vlog.link %>
+</p>
+
+<%= link_to 'Edit', edit_vlog_path(@vlog) %> |
+<%= link_to 'Back', vlogs_path %>
+
+<br><br>
+
+<h2> Reviews </h2>
+
+  <div id="Reviews">
+    <%# Expands to render partial: 'reviews/review', collection: @vlog.reviews %>
+    <%= render @vlog.reviews %>
+  </div>
+
+  <% render 'reviews/new', vlog: @vlog %>
+ </div>
+
+
